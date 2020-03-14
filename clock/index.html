@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Canvas Lab</title>
+
+    <script src="./node_modules/systemjs/dist/system.min.js"></script>
+    <script src="./node_modules/systemjs/dist/extras/named-register.js"></script>
+
+    <style></style>
+  </head>
+
+  <style>
+    canvas {
+      border: 1px solid grey;
+    }
+  </style>
+  <body>
+    <canvas id="canvas" width="500" height="500">
+      Your browser does not support the HTML 5 Canvas.
+    </canvas>
+
+    <script>
+      System.import('./bundle.js').then(() => System.import('main'))
+    </script>
+  </body>
+</html>
